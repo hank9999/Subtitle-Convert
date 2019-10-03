@@ -5,7 +5,7 @@ try:
 		for line in f1.readlines():
 			count = count + 1
 			a = line.strip()
-			f2.write(str(count) + "\n" + a[a.find(",") + 1:a.find(",") + 11] + " --> " + a[a.find(",") + 12:a.find(",") + 22] + "\n" + a[a.find("}") + 1:] + "\n\n")
+			f2.write(str(count) + "\n0" + (a[a.find(",") + 1:a.find(",") + 11]).replace(".", ",") + "0" + " --> " + "0" + (a[a.find(",") + 12:a.find(",") + 22]).replace(".", ",") + "0\n" + a[a.find("}") + 1:] + "\n\n")
 	count = 0
 	print("Convert Completed\n")
 except:
